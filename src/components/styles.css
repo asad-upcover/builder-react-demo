@@ -1,0 +1,31 @@
+.card, .hero, .testimonial, .cta-button {
+  margin: 20px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover, .hero:hover, .testimonial:hover, .cta-button:hover {
+  transform: translateY(-5px);
+}
+
+.hero {
+  background: #e0f7fa;
+}
+
+.card {
+  background: #fff9c4;
+}
+
+.testimonial {
+  background: #f3e5f5;
+  font-style: italic;
+}
+
+.cta-button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
