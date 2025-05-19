@@ -30,8 +30,13 @@ Builder.registerComponent(Testimonial, {
 });
 
 Builder.registerComponent(CTAButton, {
-  name: "CTAButton",
+  name: 'CTAButton',
   inputs: [
-    { name: "label", type: "text", defaultValue: "Get Started Now" },
-  ],
+    { name: 'label', type: 'text', defaultValue: 'Click Me' },
+    { 
+      name: 'onClick', 
+      type: 'string', // Note: Changed from 'event' to 'string'
+      defaultValue: 'alert("Clicked from Builder!")' 
+    }
+  ]
 });
