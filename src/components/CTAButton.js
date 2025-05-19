@@ -1,19 +1,28 @@
 import React from "react";
 import "./styles.css";
 
-const CTAButton = ({ label, link, onClick }) => (
-  <button
-    className="cta-button"
-    onClick={() => {
+const CTAButton = ({ label, onClick }) => {
+  const handleClick = () => {
+    try {
       if (typeof onClick === "function") {
         onClick();
-      } else if (link) {
-        window.location.href = link;
+      } else if (typeof onClick === "string") {
+        // Dynamically evaluate the string as a function
+        const fn = new Function(onClick);
+        fn();
+      } else {
+        console.log("No valid onClick provided");
       }
-    }}
-  >
-    {label}
-  </button>
-);
+    } catch (err) {
+      console.error("CTAButton click error:", err);
+    }
+  };
+
+  return (
+    <button className="cta-button" onClick={handleClick}>
+      {label}
+    </button>
+  );
+};
 
 export default CTAButton;
