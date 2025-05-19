@@ -35,7 +35,7 @@ Builder.registerComponent(CTAButton, {
     { name: "label", type: "text", defaultValue: "Get Started Now" },
     {
       name: "onClick",
-      type: "function",
+      type: "event",
       defaultValue: "() => alert('Clicked from Builder!')",
     },
   ],

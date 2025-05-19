@@ -7,7 +7,6 @@ const CTAButton = ({ label, onClick }) => {
       className="cta-button"
       onClick={() => {
         console.log("Button clicked!"); // for debugging
-        alert("CTA Button clicked!");
         if (onClick && typeof onClick === "function") {
           onClick();
         }
