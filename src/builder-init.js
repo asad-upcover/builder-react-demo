@@ -33,6 +33,10 @@ Builder.registerComponent(CTAButton, {
   name: "CTAButton",
   inputs: [
     { name: "label", type: "text", defaultValue: "Get Started Now" },
-    { name: "onClick", type: "text", helperText: 'Use: () => alert("Hi!")' },
+    {
+      name: "onClick",
+      type: "function",
+      defaultValue: "() => alert('Clicked from Builder!')",
+    },
   ],
 });
